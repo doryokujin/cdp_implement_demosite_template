@@ -34,10 +34,10 @@
       <div class="col-lg-4 col-md-5">
         <h5 class="font-weight-medium mb-4">Act As</h5>
         <form action="{{ site.Params.contact.formAction }}" method="POST" id="actas">
-          <input type="text" class="form-control mb-2" id="td_client_id" name="td_client_id" placeholder="td_client_id">
-          <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Your Email">
-          <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Your Name">
-          <input type="text" class="form-control mb-2" id="member_id" name="member_id" placeholder="member_id">          
+          <input type="email" class="form-control mb-2" id="email" name="email" placeholder="EMail to">
+          <input type="text" class="form-control mb-2" id="td_client_id" name="td_client_id" placeholder="td_client_id (optional)">
+          <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Your Name (optional)">
+          <input type="text" class="form-control mb-2" id="member_id" name="member_id" placeholder="member_id (optional)">          
           <button type="button" onclick="sendIdtoTD()" class="btn btn-block btn-outline-primary rounded">Send Record</button>
         </form>
       </div>
