@@ -36,12 +36,12 @@ function sendIdtoTD() {
   var form = document.getElementById("actas");
 
   // get form values
-  var td_client_id = form.elements["td_client_id"].value;
+  // var td_client_id = form.elements["td_client_id"].value;
   var email = form.elements["email"].value;
   var member_id = form.elements["member_id"].value;
 
 
-  const td_client_id = getCookie('_td'); // IDを取得
+  var td_client_id = getCookie('_td'); // IDを取得
   alert(td_client_id);
 
   alert("Do you behave as the following person?" + "\ntd_client_id: " + td_client_id + "\nname: " + name + "\nemail: " + email + "\nmmber_id: " + member_id);
