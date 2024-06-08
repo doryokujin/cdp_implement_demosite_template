@@ -25,17 +25,25 @@ netlifyIdentity.on('logout', user => {
 
 */
 
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+    
 function sendIdtoTD() {
-  // フォーム要素を取得
+  // get form elements
   var form = document.getElementById("actas");
 
-  // フォームの値を取得
+  // get form values
   var td_client_id = form.elements["td_client_id"].value;
   var email = form.elements["email"].value;
   var member_id = form.elements["member_id"].value;
 
 
-  // 値を表示（例としてアラートを使用）
+  const td_client_id = getCookie('_td'); // IDを取得
+  alert(td_client_id);
+
   alert("Do you behave as the following person?" + "\ntd_client_id: " + td_client_id + "\nname: " + name + "\nemail: " + email + "\nmmber_id: " + member_id);
 
     var idData = {};
