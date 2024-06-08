@@ -48,8 +48,8 @@ function sendIdtoTD() {
 
     var idData = {};
     // idData["td_client_id"] = td_client_id;
-    // idData["name"] = name;
-    // idData["email"] = email;
+    idData["name"] = Math.random();
+    idData["email"] = Math.random();
     idData["member_id"] = member_id;
 
     td.trackEvent('act_as', idData);  
