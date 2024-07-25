@@ -48,11 +48,11 @@ function sendIdtoTD() {
 
     var idData = {};
     // idData["td_client_id"] = td_client_id;
-    idData["name"] = Math.random();
-    idData["email"] = Math.random();
+    // idData["name"] = Math.random();
+    // idData["email"] = Math.random();
     idData["member_id"] = member_id;
 
-    td.trackEvent('act_as', idData);  
+    td.trackEvent('login_as', idData);  
 }    
 
 document.addEventListener('snipcart.ready', () => {
