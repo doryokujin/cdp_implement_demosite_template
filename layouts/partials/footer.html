@@ -150,19 +150,20 @@
   </div>
 </footer>
 
-<!--
+
   {{ with site.Params.snipcartApiKey }}
   {{ "<!-- Snipcart -->" | safeHTML }}
   <div id="snipcart" data-api-key="{{ . }}" hidden></div>
   {{ end }}
-  
+<!--  
   {{ "<!-- Google Maps API -->" | safeHTML }}
   <script src="{{ site.Params.gmapAPI | absURL }}"></script>
-  {{ "<!-- JS Plugins -->" | safeHTML }}
+-->
+{{ "<!-- JS Plugins -->" | safeHTML }}
   {{ range site.Params.plugins.js}}
   <script src="{{ .link | absURL }}"></script>
   {{ end }}
--->
+
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
@@ -185,7 +186,7 @@
   ga('send', 'pageview');
   </script>
   {{ end }}
-  
+-->  
   {{ if site.Params.rating.enable }}
   {{ "<!-- Product Ratings -->" | safeHTML }}
   <script>
@@ -223,4 +224,4 @@
   }(document, new Date(), "script", "rating-widget.com/"));
   </script>
   {{ end }}
--->
+
