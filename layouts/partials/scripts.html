@@ -46,13 +46,11 @@ function sendIdtoTD() {
 
   alert("Do you behave as the following person?" + "\ntd_client_id: " + td_client_id + "\nmmber_id: " + member_id);
 
-    var idData = {};
-    // idData["td_client_id"] = td_client_id;
-    // idData["name"] = Math.random();
-    // idData["email"] = Math.random();
-    idData["member_id"] = member_id;
+  var idData = {};
+  idData["member_id"] = member_id;
+  td.trackEvent('login_as', idData);  
 
-    td.trackEvent('login_as', idData);  
+  document.location.assign('products/');
 }    
 
 document.addEventListener('snipcart.ready', () => {
